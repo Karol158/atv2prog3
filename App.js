@@ -1,14 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Avatar, Button, Input } from '@rneui/themed';
-import { Header } from '@rneui/themed';
-const CustomTitle = () => <Text style={{ color: 'white' }}>Logar</Text>;
-const CustomTitle2 = () => <Text style={{ color: 'white' }}>Cadastre-se</Text>;
-const CustomTitle3 = () => <Text style={{ color: 'white' }}>Cadastrar</Text>;
-const CustomTitle4 = () => <Text style={{ color: 'white' }}>Enviar</Text>;
+import { Avatar, Button, Input } from 'react-native-elements';
 
- function Login() {
+export default  function Login() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -22,69 +17,33 @@ const CustomTitle4 = () => <Text style={{ color: 'white' }}>Enviar</Text>;
           containerStyle={{ backgroundColor: "#0000FF" }}
         />
       </View>
-
+      <Text style={{color: '#000000', fontWeight: 'bold',  marginLeft: -300}}>
+        Email
+      </Text>
       <Input
-      placeholder='Email'
+      placeholder=''
     />
-      
-      <Input placeholder="Senha" secureTextEntry={true}/>
+      <Text style={{color: '#000000', fontWeight: 'bold', marginLeft: -300}}>
+        Senha
+      </Text>
+      <Input placeholder="" secureTextEntry={true}/>
 
      
-      <Button
-              title={<CustomTitle />}
-              titleStyle={{ fontWeight: 'bold', fontSize: 18 }}
-              linearGradientProps={{
-                colors: ['#FF9800', '#F44336'],
-                start: [1, 0],
-                end: [0.2, 0],
-              }}
-              buttonStyle={{
-                borderWidth: 0,
-                borderColor: 'transparent',
-                borderRadius: 20,
-              }}
-              containerStyle={{
-                width: 200,
-                marginHorizontal: 50,
-                marginVertical: 10,
-              }}
-              icon={{
-                name: 'arrow-right',
-                type: 'font-awesome',
-                size: 15,
-                color: 'white',
-              }}
-              iconRight
-              iconContainerStyle={{ marginLeft: 10, marginRight: -10 }}
-            />
+    
              <Button
-              title={<CustomTitle2/>}
-              titleStyle={{ fontWeight: 'bold', fontSize: 18 }}
-              linearGradientProps={{
-                colors: ['#FF9800', '#F44336'],
-                start: [1, 0],
-                end: [0.2, 0],
-              }}
-              buttonStyle={{
-                borderWidth: 0,
-                borderColor: 'transparent',
-                borderRadius: 20,
-              }}
-              containerStyle={{
-                width: 200,
-                marginHorizontal: 50,
-                marginVertical: 10,
-              }}
-              icon={{
-                name: 'arrow-right',
-                type: 'font-awesome',
-                size: 15,
-                color: 'white',
-              }}
-              iconRight
-              iconContainerStyle={{ marginLeft: 10, marginRight: -10 }}
+              title="Login"
+              titleStyle={{ fontWeight: 'bold', fontSize: 18}}
+              containerStyle={{ marginVertical: 10 }}
+              buttonStyle={{ backgroundColor: '#00c0a3', borderRadius:10,}}
             />
-      <Text style={{marginTop:10,color: '#007BFF' }}>Esqueceu a senha</Text>
+
+
+            <Button
+              title="Cadastre-se"
+              titleStyle={{ fontWeight: 'bold', fontSize: 18 }}
+              buttonStyle={{ backgroundColor: '#00c0a3', borderRadius:10,}}
+            />
+      <Text style={{marginTop:10,color: '#000000' }}>Esqueceu a senha</Text>
     </View>
   );
 }
@@ -104,33 +63,7 @@ const CustomTitle4 = () => <Text style={{ color: 'white' }}>Enviar</Text>;
       />
       
       <Input placeholder="Senha" secureTextEntry={true}/>
-      <Button
-              title={<CustomTitle3 />}
-              titleStyle={{ fontWeight: 'bold', fontSize: 18 }}
-              linearGradientProps={{
-                colors: ['#FF9800', '#F44336'],
-                start: [1, 0],
-                end: [0.2, 0],
-              }}
-              buttonStyle={{
-                borderWidth: 0,
-                borderColor: 'transparent',
-                borderRadius: 20,
-              }}
-              containerStyle={{
-                width: 200,
-                marginHorizontal: 50,
-                marginVertical: 10,
-              }}
-              icon={{
-                name: 'arrow-right',
-                type: 'font-awesome',
-                size: 15,
-                color: 'white',
-              }}
-              iconRight
-              iconContainerStyle={{ marginLeft: 10, marginRight: -10 }}
-            />
+
     </View>
   );
 }
@@ -144,7 +77,7 @@ const styles1 = StyleSheet.create({
   },
 });
 
-export default function Esqueceu() {
+function Esqueceu() {
   return (
     <View style2={styles2.container1}>
       <StatusBar style="auto" />
@@ -157,41 +90,15 @@ export default function Esqueceu() {
         placeholder="Email" 
       />
       
-      <Button
-              title={<CustomTitle3 />}
-              titleStyle={{ fontWeight: 'bold', fontSize: 18 }}
-              linearGradientProps={{
-                colors: ['#FF9800', '#F44336'],
-                start: [1, 0],
-                end: [0.2, 0],
-              }}
-              buttonStyle={{
-                borderWidth: 0,
-                borderColor: 'transparent',
-                borderRadius: 20,
-              }}
-              containerStyle={{
-                width: 200,
-                marginHorizontal: 50,
-                marginVertical: 10,
-              }}
-              icon={{
-                name: 'arrow-right',
-                type: 'font-awesome',
-                size: 15,
-                color: 'white',
-              }}
-              iconRight
-              iconContainerStyle={{ marginLeft: 10, marginRight: -10 }}
-            />
+    
     </View>
   );
 }
 
-const styles2 = StyleSheet.create({
-  container1: {
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
-    backgroundColor: '#800080',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
